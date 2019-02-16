@@ -1,2 +1,14 @@
-<h1>Paintings#show</h1>
-<p>Find me in app/views/paintings/show.html.erb</p>
+<div class="view">
+<div class="frame">
+<svg width='400' height='400' version='1.1' xmlns='http://www.w3.org/2000/svg;'>
+  <rect width='100%' height='100%' fill='<%= @painting.color4 %>'/>
+    <path d='<%= @painting.coords3 %>z' stroke='<%= @painting.color1 %>' fill='<%= @painting.color1 %>'/>
+    <path d='<%= @painting.coords2 %> z' stroke='<%= @painting.color2 %>' fill='<%= @painting.color2 %>'/>
+    <path d='<%= @painting.coords1 %> z' stroke='<%= @painting.color3 %>' fill='<%= @painting.color3 %>'/></svg>
+</div>
+<h2><%= @painting.title %> by <%= @painting.artist %></h2>
+<h3><%= @painting.points %> points</h3>
+<%= button_to "Make Art", root_path, method: :get %>
+<%= button_to "Vote", vote_path, method: :get %>
+<%= button_to "Gallery", paintings_path, method: :get %>
+</div>

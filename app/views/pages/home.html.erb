@@ -1,2 +1,20 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="studio">
+<button onclick="newDiv()">Make art</button><br><br>
+<%= button_to "Gallery", paintings_path, method: :get %>
+<%= button_to "Vote", vote_path, method: :get %>
+<div class="frame" id="art">
+<%= image_tag "canvas" %>
+</div>
+<%= form_for(@painting) do |f| %>
+<%= f.hidden_field :color1, :required => true %>
+<%= f.hidden_field :color2, :required => true %>
+<%= f.hidden_field :color3, :required => true %>
+<%= f.hidden_field :color4, :required => true %>
+<%= f.hidden_field :coords1, :required => true %>
+<%= f.hidden_field :coords2, :required => true %>
+<%= f.hidden_field :coords3, :required => true %>
+<%= f.text_field :title, placeholder: "Title Your Painting", :required => true %><span class="by"> by </span>
+<%= f.text_field :artist, placeholder: "Artist's Name", :required => true %><br>
+<%= f.submit "Enter Exhibition" %>
+<% end %>
+</div>

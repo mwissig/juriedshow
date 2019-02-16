@@ -13,3 +13,103 @@
  *= require_tree .
  *= require_self
  */
+html {
+width: 100%;
+height: 100%;
+background-color: white;
+}
+
+body {
+  margin: 0 auto;
+  font-family: 'Ramaraja', serif;
+  height: 100%;
+  text-align: center;
+}
+.studio {
+  padding-top: 2em;
+display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('studio.jpg');
+  background-size: cover;
+}
+.grid {
+    padding-top: 2em;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 1em;
+}
+.view {
+    padding-top: 2em;
+}
+.allpaintings {
+  padding-top: 2em;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+h1, h2, h3 {
+  font-family: 'Great Vibes', cursive;
+}
+
+form input {
+  font-family: 'Great Vibes', cursive;
+  font-size: 30px;
+  border: none;
+  padding: 5px 30px;
+  background-image: url('canvas.jpg');
+  -webkit-clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+  clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+}
+
+form input[type='submit'] {
+    font-family: 'Trade Winds', cursive;
+      background-image: none;
+    background-color: red;
+}
+
+button {
+  margin: 0 auto;
+  font-family: 'Trade Winds', cursive;
+  font-size: 30px;
+  background-color: green;
+  border: none;
+  padding: 5px 30px;
+  -webkit-clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+  clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+}
+.by {
+    font-family: 'Great Vibes', cursive;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+.art {
+  width: 100%;
+  height: 100%;
+}
+
+svg {
+  display: inline;
+  overflow: hidden;
+}
+
+div {
+  display: inline;
+}
+
+.frame {
+  margin: 0 auto;
+  max-height: 460px;
+  background-color: #ddc;
+  border: solid 30px #eee;
+  border-bottom-color: #451d00;
+  border-left-color: #251000;
+  border-radius: 2px;
+  border-right-color: #251000;
+  border-top-color: #000;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+}
