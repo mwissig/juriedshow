@@ -3,7 +3,7 @@
 <%= button_to "Gallery", paintings_path, method: :get %>
 <%= button_to "Vote", vote_path, method: :get %>
 <div class="frame" id="art">
-<%= image_tag "canvas" %>
+<%= image_tag "canvas.jpg" %>
 </div>
 <%= form_for(@painting) do |f| %>
 <%= f.hidden_field :color1, :required => true %>
