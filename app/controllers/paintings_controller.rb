@@ -37,7 +37,7 @@ end
   end
 
   def index
-    @paintings = Painting.all.order('created_at DESC')
+    @paintings = Painting.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 16)
   end
 
   def destroy
