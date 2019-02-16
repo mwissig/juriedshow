@@ -13,7 +13,7 @@
         <h2><%= pa.title %></h2>
 
         <%= form_for(pa) do |f| %>
-        <% @painting = pa %>
+        <% f.hidden_field :points, value: pa.points %>
         <%= f.submit "Vote" %>
       <% end %>
     </div>

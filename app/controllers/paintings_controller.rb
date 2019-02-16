@@ -49,7 +49,7 @@ end
   private
 
   def painting_params
-    params.permit(:title, :artist, :points, :color1, :color2, :color3, :color4, :coords1, :coords2, :coords3)
+    params.require(:painting).permit(:title, :artist, :points, :color1, :color2, :color3, :color4, :coords1, :coords2, :coords3)
   end
 
   def find_painting
