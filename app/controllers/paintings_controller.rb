@@ -37,7 +37,7 @@ end
   end
 
   def index
-    @paintings = Painting.all
+    @paintings = Painting.all.order('created_at DESC')
   end
 
   def destroy
