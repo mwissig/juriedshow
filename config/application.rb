@@ -17,3 +17,6 @@ module Juriedshow
     # the framework and any gems in your application.
   end
 end
+Raven.configure do |config|
+  config.dsn = 'https://d9f9c9ffe6ce4df6a4cafae92a2e248c:d9a85fe8e20e4c6da2854746235f03cd@sentry.io/1395727'
+end
