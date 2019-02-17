@@ -55,5 +55,5 @@ document.getElementById("painting_color4").value = color4;
 document.getElementById("painting_coords1").value = string;
 document.getElementById("painting_coords2").value = string2;
 document.getElementById("painting_coords3").value = string3;
-
+document.getElementById("hide").classList.add("show");
 };
