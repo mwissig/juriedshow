@@ -6,9 +6,8 @@
     <path d='<%= @painting.coords2 %> z' stroke='<%= @painting.color2 %>' fill='<%= @painting.color2 %>'/>
     <path d='<%= @painting.coords1 %> z' stroke='<%= @painting.color3 %>' fill='<%= @painting.color3 %>'/></svg>
 </div>
+<div>
 <h2><%= @painting.title %> by <%= @painting.artist %></h2>
 <h3><%= @painting.points %> points</h3>
-<%= button_to "Make Art", root_path, method: :get %>
-<%= button_to "Vote", vote_path, method: :get %>
-<%= button_to "Gallery", paintings_path, method: :get %>
+</div>
 </div>
