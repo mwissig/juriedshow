@@ -12,6 +12,14 @@
   </head>
 
   <body>
+    <div class="buttons">
+    <%= button_to "Make Art", root_path, method: :get %>
+    <%= button_to "Gallery", paintings_path, method: :get %>
+    <%= button_to "Top 10", top_path, method: :get %>
+    <%= button_to "Vote", vote_path, method: :get %>
+    </div>
+    <div class="content">
     <%= yield %>
+  </div>
   </body>
 </html>

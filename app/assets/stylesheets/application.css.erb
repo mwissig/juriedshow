@@ -26,7 +26,7 @@ body {
   text-align: center;
 }
 .studio {
-  padding-top: 2em;
+  padding-top: 5em;
 display: block;
   width: 100%;
   height: 100%;
@@ -34,17 +34,17 @@ display: block;
   background-size: cover;
 }
 .grid {
-    padding-top: 2em;
+    padding-top: 5em;
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
   grid-gap: 1em;
 }
 .view {
-    padding-top: 2em;
+    padding-top: 5em;
 }
 .allpaintings {
-  padding-top: 2em;
+  padding-top: 5em;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -67,9 +67,13 @@ form input[type='submit'] {
     font-family: 'Trade Winds', cursive;
       background-image: none;
     background-color: red;
+      display: inline;
+      cursor: pointer;
 }
 
 button {
+
+  display: inline;
   margin: 0 auto;
   font-family: 'Trade Winds', cursive;
   font-size: 30px;
@@ -78,6 +82,17 @@ button {
   padding: 5px 30px;
   -webkit-clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
   clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+        cursor: pointer;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+.content {
 }
 .by {
     font-family: 'Great Vibes', cursive;
