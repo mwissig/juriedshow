@@ -42,7 +42,7 @@ function newDiv() {
   for (i=0; i<48; i++) {
     coords.push(Math.floor((Math.random() * 400) + 1).toString())
   }
-  var string = 'M' + coords[0] + ' ' + coords[1] + ' C ' + coords[2]  + ' ' +  coords[3] + ', ' + coords[4]  + ' ' + coords[5] + ', ' + coords[6]  + ' ' +  coords[7] + 'S' + + coords[8]  + ' ' + coords[9] + ', ' + coords[10]  + ' ' +  coords[11]+ 'S' + + coords[12]  + ' ' + coords[13] + ', ' + coords[14]  + ' ' +  coords[15];
+  var string = 'M' + coords[0] + ' ' + coords[1] + ' C ' + coords[2]  + ' ' +  coords[3] + ', ' + coords[4]  + ' ' + coords[5] + ', ' + coords[6]  + ' ' +  coords[7] + 'S' + ''+ coords[8]  + ' ' + coords[9] + ', ' + coords[10]  + ' ' +  coords[11]+ 'S' + + coords[12]  + ' ' + coords[13] + ', ' + coords[14]  + ' ' +  coords[15];
     var string2 = 'M' + coords[16] + ' ' + coords[17] + ' C ' + coords[18]  + ' ' +  coords[19] + ', ' + coords[20]  + ' ' + coords[21] + ', ' + coords[22]  + ' ' +  coords[23] + 'S' + + coords[24]  + ' ' + coords[25] + ', ' + coords[26]  + ' ' +  coords[27]+ 'S' + + coords[28]  + ' ' + coords[29] + ', ' + coords[30]  + ' ' +  coords[31];
       var string3 = 'M' + coords[32] + ' ' + coords[33] + ' C ' + coords[34]  + ' ' +  coords[35] + ', ' + coords[36]  + ' ' + coords[37] + ', ' + coords[38]  + ' ' +  coords[39] + 'S' + + coords[40]  + ' ' + coords[41] + ', ' + coords[42]  + ' ' +  coords[43]+ 'S' + + coords[44]  + ' ' + coords[45] + ', ' + coords[46]  + ' ' +  coords[47];
 

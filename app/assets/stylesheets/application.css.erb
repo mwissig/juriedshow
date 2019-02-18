@@ -34,7 +34,7 @@ body {
 }
 
 .studio {
-  padding-top: 5em;
+  padding-top: 3.5em;
   display: block;
   width: 100%;
   min-height: 100vh;
@@ -45,7 +45,7 @@ body {
           /* overflow-y: scroll; */
 }
 .grid {
-    padding-top: 5em;
+    padding-top: 3.5em;
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
@@ -54,11 +54,11 @@ body {
   max-width: 1000px;
 }
 .view {
-    padding-top: 5em;
+    padding-top: 3.5em;
     display:block;
 }
 .allpaintings {
-  padding-top: 5em;
+  padding-top: 3.5em;
   padding-left: 1em;
   padding-right: 1em;
   display: flex;
@@ -68,6 +68,10 @@ body {
 h1, h2, h3 {
   font-family: 'Great Vibes', cursive;
 }
+h2 {
+  margin-top: .3em;
+  margin-bottom: .1em;
+}
 form {
   width: 100%;
 }
@@ -76,6 +80,9 @@ form {
 }
 .show {
   visibility: visible !important;
+}
+.show form {
+  margin-top: 1em;
 }
 footer {
   position: absolute;
@@ -105,7 +112,7 @@ a, a:visited {
 }
 #makeart {
   position: absolute;
-  top: 500px;
+  top: calc(2.5em + 400px);
   margin: 0 auto;
   left: 50%;
 -webkit-transform: translateX(-50%);
@@ -215,6 +222,22 @@ margin: 2em auto;
 .grid {
   line-height: 1em;
   display: block;
+}
+#makeart {
+  top: calc(4em + 400px);
+}
+.show form {
+  margin-top: 0;
 
 }
-}
+
+
+/* @media only screen and (max-height: 650px) {
+  form input, button {
+    font-size: 20px;
+      padding: 3px 20px;
+  }
+  .show form {
+    margin-top: 0;
+  }
+} */
