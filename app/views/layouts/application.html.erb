@@ -4,7 +4,11 @@
     <title>Juried Show</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta property="og:title" content="Juried Show">
+    <meta property="og:description" content="Create randomly generated paintings and vote for your favorites.">
+    <meta property="og:image" content="<%= asset_path 'art2.png' %>">
+    <meta property="og:url" content="https://juriedshow.herokuapp.com/">
+    <meta name="twitter:card" content="<%= asset_path 'art.png' %>">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
