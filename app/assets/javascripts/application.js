@@ -64,37 +64,3 @@ document.getElementById("painting_coords2").value = string2;
 document.getElementById("painting_coords3").value = string3;
 document.getElementById("hide").classList.add("show");
 };
-
-convert('#show');
-
-    function convert(selectors){
-      [].forEach.call(document.querySelectorAll(selectors),function(div){
-        try{
-          var sourceImage;
-          var imgs = div.querySelector('img'),
-              svg  = div.querySelector('svg'),
-              can  = div.querySelector('canvas'),
-              ctx  = can.getContext('2d');
-          can.width  = imgs.getAttribute('width')*1;
-          can.height = imgs.getAttribute('height')*1;
-          if (svg){
-            imgs.src = svgDataURL(svg);
-            sourceImage = new Image;
-            sourceImage.width  = can.width;
-            sourceImage.height = can.height;
-          }else{
-            sourceImage = imgs;
-          }
-          sourceImage.onload = function(){
-            ctx.drawImage(sourceImage,0,0,imgs.width,imgs.height);
-            imgs.src = can.toDataURL();
-          };
-          sourceImage.src = svg ? svgDataURL(svg) : div.getAttribute('data-svgSource');
-        }catch(e){ console.log(e) }
-      });
-    }
-
-    function svgDataURL(svg) {
-      var svgAsXML = (new XMLSerializer).serializeToString(svg);
-      return "data:image/svg+xml," + encodeURIComponent(svgAsXML);
-    }
