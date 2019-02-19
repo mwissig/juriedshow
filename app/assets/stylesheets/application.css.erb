@@ -14,10 +14,9 @@
  *= require_self
  */
 html {
-width: 100%;
-height: 100%;
-background-color: white;
-
+  width: 100%;
+  height: 100%;
+  background-color: white;
 }
 
 body {
@@ -27,10 +26,10 @@ body {
   height: auto;
   text-align: center;
   background-image: url('<%= asset_path 'room.jpg' %>');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    /* overflow-y: scroll; */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* overflow-y: scroll; */
 }
 
 .studio {
@@ -41,11 +40,12 @@ body {
   height: auto;
   background-image: url('<%= asset_path 'studio.jpg' %>');
   background-size: cover;
-      background-attachment: fixed;
-          /* overflow-y: scroll; */
+  background-attachment: fixed;
+  /* overflow-y: scroll; */
 }
+
 .grid {
-    padding-top: 3.5em;
+  padding-top: 3.5em;
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
@@ -53,10 +53,12 @@ body {
   margin: 0 auto;
   max-width: 1000px;
 }
+
 .view {
-    padding-top: 3.5em;
-    display:block;
+  padding-top: 3.5em;
+  display: block;
 }
+
 .allpaintings {
   padding-top: 3.5em;
   padding-left: 1em;
@@ -65,25 +67,32 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
 h1, h2, h3 {
   font-family: 'Great Vibes', cursive;
 }
+
 h2 {
   margin-top: .3em;
   margin-bottom: .1em;
 }
+
 form {
   width: 100%;
 }
+
 #hide {
   visibility: collapse;
 }
+
 .show {
   visibility: visible !important;
 }
+
 .show form {
   margin-top: 1em;
 }
+
 footer {
   position: absolute;
   bottom: 0;
@@ -91,11 +100,13 @@ footer {
   width: auto;
   text-align: right;
 }
+
 .item {
   max-width: 200px;
   line-height: 1em;
   margin: .5em 1em;
 }
+
 .item svg {
   background-color: #ddc;
   border: solid 8px #eee;
@@ -107,17 +118,20 @@ footer {
   box-sizing: border-box;
   max-width: 216px;
 }
+
 a, a:visited {
   color: black;
 }
+
 #makeart {
   position: absolute;
   top: calc(2.5em + 400px);
   margin: 0 auto;
   left: 50%;
--webkit-transform: translateX(-50%);
-transform: translateX(-50%)
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
 }
+
 form input {
   font-family: 'Great Vibes', cursive;
   font-size: 30px;
@@ -129,15 +143,14 @@ form input {
 }
 
 form input[type='submit'] {
-    font-family: 'Trade Winds', cursive;
-      background-image: none;
-    background-color: red;
-      display: inline;
-      cursor: pointer;
+  font-family: 'Trade Winds', cursive;
+  background-image: none;
+  background-color: red;
+  display: inline;
+  cursor: pointer;
 }
 
 button {
-
   display: inline;
   margin: 0 auto;
   font-family: 'Trade Winds', cursive;
@@ -147,8 +160,9 @@ button {
   padding: 5px 30px;
   -webkit-clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
   clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
-        cursor: pointer;
+  cursor: pointer;
 }
+
 .buttons {
   display: flex;
   justify-content: center;
@@ -157,14 +171,16 @@ button {
   margin: 0 auto;
   width: 100%;
 }
-.content {
-}
+
+.content {}
+
 .by {
-    font-family: 'Great Vibes', cursive;
+  font-family: 'Great Vibes', cursive;
   color: white;
   font-weight: bold;
   font-size: 30px;
 }
+
 .art {
   width: 100%;
   height: 100%;
@@ -193,51 +209,64 @@ div {
   display: inline-block;
   text-align: center;
 }
+
 @media only screen and (max-width: 500px) {
   .buttons {
     max-width: 100vw;
     justify-content: space-around;
   }
-footer {
-  position: sticky;
-margin: 2em auto;
-}
+
+  footer {
+    position: sticky;
+    margin: 2em auto;
+  }
+
   form input, button {
     font-size: 20px;
-      padding: 3px 20px;
+    padding: 3px 20px;
   }
+
   .buttons form input {
     font-size: 15px;
     padding: 8px 20px;
     padding-top: 15px;
   }
+
   .frame {
     max-width: 100%;
     max-height: 100vw;
     overflow: hidden;
     margin-bottom: 1em;
   }
+
   .studio, .grid, .view, .allpaintings {
     padding-top: 3em;
   }
-.grid {
-  line-height: 1em;
-  display: block;
-}
-#makeart {
-  top: calc(4em + 100vw - 60px);
-}
-#vote svg {
-height: calc(50vh - 120px - 3em);
-width: calc(50vh - 120px - 3em);
+
+  .grid {
+    line-height: 1em;
+    display: block;
   }
+
+  #makeart {
+    top: calc(4em + 100vw - 60px);
+  }
+
+  #vote svg {
+    height: calc(50vh - 120px - 3em);
+    width: calc(50vh - 120px - 3em);
+  }
+
   #vote .frame {
     height: calc(50vh - 60px - 3em);
     width: calc(50vh - 60px - 3em);
   }
+
   #vote h2 {
-    margin-top: -.5em;
+    margin-top: -0.5em;
   }
-.show form {
-  margin-top: 0;
+
+  .show form {
+    margin-top: 0;
+  }
 }
