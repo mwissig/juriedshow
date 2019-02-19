@@ -1,8 +1,8 @@
-<div class="grid">
+<div class="grid" id="vote">
   <% @paintings.each do |pa| %>
     <div>
       <div class="frame">
-        <svg width='400' height='400' version='1.1' xmlns='http://www.w3.org/2000/svg;'>
+        <svg viewBox='0 0 400 400' width='400' height='400' version='1.1' xmlns='http://www.w3.org/2000/svg;'>
           <rect width='100%' height='100%' fill='<%= pa.color4 %>'/>
           <path d='<%= pa.coords3 %>z' stroke='<%= pa.color1 %>' fill='<%= pa.color1 %>'/>
           <path d='<%= pa.coords2 %> z' stroke='<%= pa.color2 %>' fill='<%= pa.color2 %>'/>

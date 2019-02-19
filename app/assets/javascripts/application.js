@@ -45,8 +45,15 @@ function newDiv() {
   var string = 'M' + coords[0] + ' ' + coords[1] + ' C ' + coords[2]  + ' ' +  coords[3] + ', ' + coords[4]  + ' ' + coords[5] + ', ' + coords[6]  + ' ' +  coords[7] + 'S' + ''+ coords[8]  + ' ' + coords[9] + ', ' + coords[10]  + ' ' +  coords[11]+ 'S' + + coords[12]  + ' ' + coords[13] + ', ' + coords[14]  + ' ' +  coords[15];
     var string2 = 'M' + coords[16] + ' ' + coords[17] + ' C ' + coords[18]  + ' ' +  coords[19] + ', ' + coords[20]  + ' ' + coords[21] + ', ' + coords[22]  + ' ' +  coords[23] + 'S' + + coords[24]  + ' ' + coords[25] + ', ' + coords[26]  + ' ' +  coords[27]+ 'S' + + coords[28]  + ' ' + coords[29] + ', ' + coords[30]  + ' ' +  coords[31];
       var string3 = 'M' + coords[32] + ' ' + coords[33] + ' C ' + coords[34]  + ' ' +  coords[35] + ', ' + coords[36]  + ' ' + coords[37] + ', ' + coords[38]  + ' ' +  coords[39] + 'S' + + coords[40]  + ' ' + coords[41] + ', ' + coords[42]  + ' ' +  coords[43]+ 'S' + + coords[44]  + ' ' + coords[45] + ', ' + coords[46]  + ' ' +  coords[47];
-
-art.innerHTML = "<svg width='400' height='400' version='1.1' xmlns='http://www.w3.org/2000/svg;'><rect width='100%' height='100%' fill='" + color4 + "'/><path d='" + string3 + " z' stroke='" + color1 + "' fill='" + color1 + "'/><path d='" + string2 + " z' stroke='" + color2 + "' fill='" + color2 + "'/><path d='" + string + " z' stroke='" + color3 + "' fill='" + color3 + "'/></svg>";
+w = window.innerWidth;
+console.log(w);
+if (w < 460) {
+  var width = w - 60;
+}
+else {
+  var width = 400;
+}
+art.innerHTML = "<svg viewBox='0 0 400 400' width='" + width + "' height='" + width + "' version='1.1' xmlns='http://www.w3.org/2000/svg;'><rect width='100%' height='100%' fill='" + color4 + "'/><path d='" + string3 + " z' stroke='" + color1 + "' fill='" + color1 + "'/><path d='" + string2 + " z' stroke='" + color2 + "' fill='" + color2 + "'/><path d='" + string + " z' stroke='" + color3 + "' fill='" + color3 + "'/></svg>";
 
 document.getElementById("painting_color1").value = color1;
 document.getElementById("painting_color2").value = color2;
@@ -57,3 +64,37 @@ document.getElementById("painting_coords2").value = string2;
 document.getElementById("painting_coords3").value = string3;
 document.getElementById("hide").classList.add("show");
 };
+
+convert('#show');
+
+    function convert(selectors){
+      [].forEach.call(document.querySelectorAll(selectors),function(div){
+        try{
+          var sourceImage;
+          var imgs = div.querySelector('img'),
+              svg  = div.querySelector('svg'),
+              can  = div.querySelector('canvas'),
+              ctx  = can.getContext('2d');
+          can.width  = imgs.getAttribute('width')*1;
+          can.height = imgs.getAttribute('height')*1;
+          if (svg){
+            imgs.src = svgDataURL(svg);
+            sourceImage = new Image;
+            sourceImage.width  = can.width;
+            sourceImage.height = can.height;
+          }else{
+            sourceImage = imgs;
+          }
+          sourceImage.onload = function(){
+            ctx.drawImage(sourceImage,0,0,imgs.width,imgs.height);
+            imgs.src = can.toDataURL();
+          };
+          sourceImage.src = svg ? svgDataURL(svg) : div.getAttribute('data-svgSource');
+        }catch(e){ console.log(e) }
+      });
+    }
+
+    function svgDataURL(svg) {
+      var svgAsXML = (new XMLSerializer).serializeToString(svg);
+      return "data:image/svg+xml," + encodeURIComponent(svgAsXML);
+    }
