@@ -46,13 +46,13 @@ function newDiv() {
     var string2 = 'M' + coords[16] + ' ' + coords[17] + ' C ' + coords[18]  + ' ' +  coords[19] + ', ' + coords[20]  + ' ' + coords[21] + ', ' + coords[22]  + ' ' +  coords[23] + 'S' + + coords[24]  + ' ' + coords[25] + ', ' + coords[26]  + ' ' +  coords[27]+ 'S' + + coords[28]  + ' ' + coords[29] + ', ' + coords[30]  + ' ' +  coords[31];
       var string3 = 'M' + coords[32] + ' ' + coords[33] + ' C ' + coords[34]  + ' ' +  coords[35] + ', ' + coords[36]  + ' ' + coords[37] + ', ' + coords[38]  + ' ' +  coords[39] + 'S' + + coords[40]  + ' ' + coords[41] + ', ' + coords[42]  + ' ' +  coords[43]+ 'S' + + coords[44]  + ' ' + coords[45] + ', ' + coords[46]  + ' ' +  coords[47];
 w = window.innerWidth;
-console.log(w);
 if (w < 460) {
   var width = w - 60;
 }
 else {
   var width = 400;
 }
+
 art.innerHTML = "<svg viewBox='0 0 400 400' width='" + width + "' height='" + width + "' version='1.1' xmlns='http://www.w3.org/2000/svg;'><rect width='100%' height='100%' fill='" + color4 + "'/><path d='" + string3 + " z' stroke='" + color1 + "' fill='" + color1 + "'/><path d='" + string2 + " z' stroke='" + color2 + "' fill='" + color2 + "'/><path d='" + string + " z' stroke='" + color3 + "' fill='" + color3 + "'/></svg>";
 
 document.getElementById("painting_color1").value = color1;
