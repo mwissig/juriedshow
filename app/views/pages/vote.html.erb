@@ -14,7 +14,9 @@
 
         <%= form_for(pa) do |f| %>
         <% f.hidden_field :points, value: pa.points %>
-        <%= f.submit "Vote" %>
+        <%= f.button :submit do %>
+        <i class="fas fa-thumbs-up"></i> Vote
+        <% end %>
       <% end %>
     </div>
   </div>
