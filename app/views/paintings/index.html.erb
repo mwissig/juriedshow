@@ -9,7 +9,7 @@
           <path d='<%= pa.coords2 %> z' stroke='<%= pa.color2 %>' fill='<%= pa.color2 %>'/>
           <path d='<%= pa.coords1 %> z' stroke='<%= pa.color3 %>' fill='<%= pa.color3 %>'/></svg>
             <br>
-            <%= link_to '&quot;'.html_safe + pa.title.to_s + '&quot;'.html_safe, painting_path(pa) %> by <%= pa.artist %><br>
+            <span class="link"><%= link_to '&quot;'.html_safe + pa.title.to_s + '&quot;'.html_safe, painting_path(pa) %></span> by <%= pa.artist %><br>
           <%= pa.points %> points<br>
   </div>
 <% end %>
