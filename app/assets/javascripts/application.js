@@ -65,6 +65,14 @@ document.getElementById("painting_coords3").value = string3;
 document.getElementById("hide").classList.add("show");
 };
 
+var w = window.innerWidth;
+if (w < 460) {
+  var width = w - 60;
+}
+else {
+  var width = 400;
+}
+
 function noir() {
   var coords = [];
   var hex = [ "0", "F"];
@@ -88,13 +96,7 @@ function noir() {
   var string3 = 'M' + coords[0] + ' ' + coords[1] + ' ' + coords[2]  + ' ' +  coords[3] + ', ' + coords[4]  + ' ' + coords[5] + ', ' + coords[6]  + ' ' +  coords[7];
   var string2 = 'M' + coords[8] + ' ' + coords[9] + ' A ' + coords[10]  + ' ' +  coords[11] + ' ' + coords[12]  + ' ' + coords[13] + ' ' + coords[14]  + ' ' +  coords[15] + ' ' + coords[16]  + ' ' + coords[17] + ' A ' + coords[18]  + ' ' +  coords[19]+ ' ' + coords[20]  + ' ' + coords[21] + ' ' + coords[22]  + ' ' +  coords[23] + ' ' + coords[24]  + ' ' + coords[25] + ' S ' + coords[26]  + ' ' +  coords[27] + coords[28]  + ' ' +  coords[29];
   var string = 'M' + coords[32] + ' ' + coords[33] + ' C ' + coords[34]  + ' ' +  coords[35] + ', ' + coords[36]  + ' ' + coords[37] + ', ' + coords[38]  + ' ' +  coords[39] + ' S ' + coords[40]  + ' ' + coords[41] + ', ' + coords[42]  + ' ' +  coords[43]+ ' S ' + coords[44]  + ' ' + coords[45] + ', ' + coords[46]  + ' ' +  coords[47];
-w = window.innerWidth;
-if (w < 460) {
-  var width = w - 60;
-}
-else {
-  var width = 400;
-}
+
 
 art.innerHTML = "<svg viewBox='0 0 400 400' width='" + width + "' height='" + width + "' version='1.1' xmlns='http://www.w3.org/2000/svg;'><rect width='100%' height='100%' fill='" + color4 + "'/><path d='" + string3 + " z' stroke='" + color1 + "' fill='" + color1 + "'/><path d='" + string2 + " z' stroke='" + color2 + "' fill='" + color2 + "'/><path d='" + string + " z' stroke='" + color3 + "' fill='" + color3 + "'/></svg>";
 
