@@ -24,7 +24,7 @@ function shuffleArray(array) {
 
 function newDiv() {
   var coords = [];
-  var hex = [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
+  var hex = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
   var i = [Math.floor(Math.random() * 6), Math.floor(Math.random() * 6), Math.floor(Math.random() * 6), Math.floor(Math.random() * 6), Math.floor(Math.random() * 6), Math.floor(Math.random() * 6)];
   shuffleArray(hex);
   var color1 = "#" + hex[i[0]] + hex[i[1]] + hex[i[2]] + hex[i[3]] + hex[i[4]] + hex[i[5]];
@@ -45,6 +45,49 @@ function newDiv() {
   var string = 'M' + coords[0] + ' ' + coords[1] + ' C ' + coords[2]  + ' ' +  coords[3] + ', ' + coords[4]  + ' ' + coords[5] + ', ' + coords[6]  + ' ' +  coords[7] + 'S' + ''+ coords[8]  + ' ' + coords[9] + ', ' + coords[10]  + ' ' +  coords[11]+ 'S' + + coords[12]  + ' ' + coords[13] + ', ' + coords[14]  + ' ' +  coords[15];
     var string2 = 'M' + coords[16] + ' ' + coords[17] + ' C ' + coords[18]  + ' ' +  coords[19] + ', ' + coords[20]  + ' ' + coords[21] + ', ' + coords[22]  + ' ' +  coords[23] + 'S' + + coords[24]  + ' ' + coords[25] + ', ' + coords[26]  + ' ' +  coords[27]+ 'S' + + coords[28]  + ' ' + coords[29] + ', ' + coords[30]  + ' ' +  coords[31];
       var string3 = 'M' + coords[32] + ' ' + coords[33] + ' C ' + coords[34]  + ' ' +  coords[35] + ', ' + coords[36]  + ' ' + coords[37] + ', ' + coords[38]  + ' ' +  coords[39] + 'S' + + coords[40]  + ' ' + coords[41] + ', ' + coords[42]  + ' ' +  coords[43]+ 'S' + + coords[44]  + ' ' + coords[45] + ', ' + coords[46]  + ' ' +  coords[47];
+w = window.innerWidth;
+if (w < 460) {
+  var width = w - 60;
+}
+else {
+  var width = 400;
+}
+
+art.innerHTML = "<svg viewBox='0 0 400 400' width='" + width + "' height='" + width + "' version='1.1' xmlns='http://www.w3.org/2000/svg;'><rect width='100%' height='100%' fill='" + color4 + "'/><path d='" + string3 + " z' stroke='" + color1 + "' fill='" + color1 + "'/><path d='" + string2 + " z' stroke='" + color2 + "' fill='" + color2 + "'/><path d='" + string + " z' stroke='" + color3 + "' fill='" + color3 + "'/></svg>";
+
+document.getElementById("painting_color1").value = color1;
+document.getElementById("painting_color2").value = color2;
+document.getElementById("painting_color3").value = color3;
+document.getElementById("painting_color4").value = color4;
+document.getElementById("painting_coords1").value = string;
+document.getElementById("painting_coords2").value = string2;
+document.getElementById("painting_coords3").value = string3;
+document.getElementById("hide").classList.add("show");
+};
+
+function noir() {
+  var coords = [];
+  var hex = [ "0", "F"];
+  var i = Math.floor(Math.random() * 2);
+  var color1 = "#" + hex[i] + hex[i] + hex[i] + hex[i] + hex[i] + hex[i];
+  if (i == 0) {
+    i = 1;
+  }
+  else {
+    i = 0;
+  }
+  var color2 = "#" + hex[i] + hex[i] + hex[i] + hex[i] + hex[i] + hex[i];
+  var i = Math.floor(Math.random() * 2);
+  var color3 = "#" + hex[i] + hex[i] + hex[i] + hex[i] + hex[i] + hex[i];
+  var i = Math.floor(Math.random() * 2);
+  var color4 = "#" + hex[i] + hex[i] + hex[i] + hex[i] + hex[i] + hex[i];
+
+  for (i=0; i<48; i++) {
+    coords.push(Math.floor((Math.random() * 500) - 100).toString())
+  }
+  var string3 = 'M' + coords[0] + ' ' + coords[1] + ' ' + coords[2]  + ' ' +  coords[3] + ', ' + coords[4]  + ' ' + coords[5] + ', ' + coords[6]  + ' ' +  coords[7];
+  var string2 = 'M' + coords[8] + ' ' + coords[9] + ' A ' + coords[10]  + ' ' +  coords[11] + ' ' + coords[12]  + ' ' + coords[13] + ' ' + coords[14]  + ' ' +  coords[15] + ' ' + coords[16]  + ' ' + coords[17] + ' A ' + coords[18]  + ' ' +  coords[19]+ ' ' + coords[20]  + ' ' + coords[21] + ' ' + coords[22]  + ' ' +  coords[23] + ' ' + coords[24]  + ' ' + coords[25] + ' S ' + coords[26]  + ' ' +  coords[27] + coords[28]  + ' ' +  coords[29];
+  var string = 'M' + coords[32] + ' ' + coords[33] + ' C ' + coords[34]  + ' ' +  coords[35] + ', ' + coords[36]  + ' ' + coords[37] + ', ' + coords[38]  + ' ' +  coords[39] + ' S ' + coords[40]  + ' ' + coords[41] + ', ' + coords[42]  + ' ' +  coords[43]+ ' S ' + coords[44]  + ' ' + coords[45] + ', ' + coords[46]  + ' ' +  coords[47];
 w = window.innerWidth;
 if (w < 460) {
   var width = w - 60;

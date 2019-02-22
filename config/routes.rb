@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'noir' => 'pages#noir'
   get 'top' => 'pages#top'
   get 'vote' => 'pages#vote'
   root 'pages#home'
